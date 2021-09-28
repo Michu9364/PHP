@@ -2,7 +2,7 @@
 	<div class="leftSidebar">
 	<li><a href="..\index.php">Strona główna</a></li>
 		<?php
-		$catalog = scandir('C:xampp/htdocs/pages');
+		$catalog = scandir( __DIR__ . '/../pages');
 		foreach($catalog as $item){
 			$cutted_item = str_replace(".php", "", $item);
 			if ($item != '.' && $item != '..') {

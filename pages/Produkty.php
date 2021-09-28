@@ -23,7 +23,7 @@ $products = [
 				$suma = 0;
 				foreach($products as $product){
 					$suma = $suma + $product["price"];
-					echo "<li>nazwa: " . $product["name"]. " cena: " .$product["price"] . "</li>";
+					echo "<li>Przedmiot: " . $product["name"]. " cena: " .$product["price"] . "</li>";
 				}
 				?>
 			</ul>

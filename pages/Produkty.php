@@ -1,15 +1,15 @@
 <?php
 $products = [
-    ["name" => 'koszulka', "price" => 20],
-    ["name" => 'koszulka2', "price" => 30],
-    ["name" => 'koszulka3', "price" => 40]
+    ["name" => 'Koszulka', "price" => 80],
+    ["name" => 'Spodnie', "price" => 65],
+    ["name" => 'Buty', "price" => 220]
 ];
 ?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Producty</title>
 	<link rel="stylesheet" href="../styles.css">
 </head>
 <body>
@@ -23,7 +23,7 @@ $products = [
 				$suma = 0;
 				foreach($products as $product){
 					$suma = $suma + $product["price"];
-					echo "<li>Przedmiot: " . $product["name"]. " cena: " .$product["price"] . "</li>";
+					echo "<li>" . $product["name"]. " -". " cena: " .$product["price"] . "zł</li>";
 				}
 				?>
 			</ul>

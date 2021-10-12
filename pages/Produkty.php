@@ -14,7 +14,13 @@
 			<ul>
 				<?php
 				$suma = 0;
-				$mysqli = new mysqli("localhost", "root", "", "blockphp");
+				$string = file_get_contents("../login.json");
+				$json = json_decode($string, true);
+				$login = $json['login'];
+				$pass = $json['pass'];
+				$name = $json['name'];
+				$base = $json['base'];
+				$mysqli = new mysqli($base, $login, $pass, $name);
 				$result = $mysqli->query("SELECT * FROM products");
 				foreach($result as $row){
 					echo "<li>" . $row["Name"]. " -". " cena: " .$row["Price"] . "zł</li>";

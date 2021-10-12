@@ -10,14 +10,29 @@
 <?php include '../fragments/navbar.php'; ?>
 <div class="content">
 		<div class="wrapper">
-			<h3>Baza testowa</h3>
+			<h1>Baza testowa</h1>
 			<?php
-			$requestedUser = $_GET['user_id'];
-			$mysqli = new mysqli("localhost", "root", "", "blockphp");
-			$result = $mysqli->query("SELECT * FROM posts WHERE author = $requestedUser");
+
+			if (isset($_GET['user_id'])) {
+				$requestedUser = $_GET['user_id'];
+			}
+			$string = file_get_contents("../login.json");
+			$json = json_decode($string, true);
+			$login = $json['login'];
+			$pass = $json['pass'];
+			$name = $json['name'];
+			$base = $json['base'];
+			$mysqli = new mysqli($base, $login, $pass, $name);
+			if (isset($requestedUser)) {
+				$result = $mysqli->query("SELECT * FROM posts WHERE author = $requestedUser");
+			} else {
+				$result = $mysqli->query("SELECT * FROM posts");
+			}
 			foreach ($result as $row) {
 				echo " id: " . $row['id'] . ", title: " . $row['title'] . ", body: " . $row['body'] . "<br>";
 			}
+			
+			
 			?>
 		</div>
 	</div>	

@@ -1,3 +1,4 @@
 <div class="header">
-	<img src="https://via.placeholder.com/80">
+	<img src="../logo.png">
+	<a class="headerfont">PHP - Ćwiczenia</a>
 </div>

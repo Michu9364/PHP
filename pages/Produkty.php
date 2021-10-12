@@ -1,15 +1,8 @@
-<?php
-$products = [
-    ["name" => 'Koszulka', "price" => 80],
-    ["name" => 'Spodnie', "price" => 65],
-    ["name" => 'Buty', "price" => 220]
-];
-?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
 	<meta charset="UTF-8">
-	<title>Producty</title>
+	<title>Produkty</title>
 	<link rel="stylesheet" href="../styles.css">
 </head>
 <body>
@@ -17,17 +10,19 @@ $products = [
 <?php include '../fragments/navbar.php'; ?>
 <div class="content">
 		<div class="wrapper">
-			<h3>Nasze wspaniałe produkty:</h3>
+			<h1>Nasze wspaniałe produkty:</h1>
 			<ul>
 				<?php
 				$suma = 0;
-				foreach($products as $product){
-					$suma = $suma + $product["price"];
-					echo "<li>" . $product["name"]. " -". " cena: " .$product["price"] . "zł</li>";
+				$mysqli = new mysqli("localhost", "root", "", "blockphp");
+				$result = $mysqli->query("SELECT * FROM products");
+				foreach($result as $row){
+					echo "<li>" . $row["Name"]. " -". " cena: " .$row["Price"] . "zł</li>";
+					$suma = $suma + $row["Price"];	
 				}
 				?>
 			</ul>
-			<p>Suma: <?php echo $suma;?> zł</p>
+			<h3>Suma: <?php echo $suma;?> zł</h3>
 		</div>
 	</div>
 	<?php include '../fragments/sidebar.php'; ?>

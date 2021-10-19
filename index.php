@@ -11,8 +11,8 @@
 <?php include 'fragments/navbar.php'; ?>
 	<div class="content">
 		<div class="wrapper">
-			<h1 style="font-size:3vw;">O sklepie</h1>
-			<p style="font-size:1vw;">Naszą misją jest to, co motywuje nas do robienia wszystkiego, co możliwe, aby poszerzać ludzki potencjał. Robimy to, tworząc przełomowe innowacje sportowe, czyniąc nasze produkty bardziej zrównoważonymi, budując kreatywny i zróżnicowany globalny zespół oraz wywierając pozytywny wpływ na społeczności, w których żyjemy i pracujemy.</p>
+			<h1>O sklepie</h1>
+			<p>Naszą misją jest to, co motywuje nas do robienia wszystkiego, co możliwe, aby poszerzać ludzki potencjał. Robimy to, tworząc przełomowe innowacje sportowe, czyniąc nasze produkty bardziej zrównoważonymi, budując kreatywny i zróżnicowany globalny zespół oraz wywierając pozytywny wpływ na społeczności, w których żyjemy i pracujemy.</p>
 			<img src="../Artwork/like.png" width="460" height="320">
 		</div>
 	</div>

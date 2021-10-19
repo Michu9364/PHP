@@ -1,6 +1,13 @@
 {
-    "login": "",
-    "pass": "",
-    "name": "",
-    "base": ""
+    "login": "login",
+    "pass": "hasło",
+    "basename": "nazwabazy",
+    "host": "ipbazy",
+
+    "postid": "id",
+	"posttitle": "title",
+	"postbody": "body",
+    
+    "productname": "name",
+    "productprice": "price"
 }

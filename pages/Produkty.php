@@ -10,25 +10,30 @@
 <?php include '../fragments/navbar.php'; ?>
 <div class="content">
 		<div class="wrapper">
-			<h1>Nasze wspaniałe produkty:</h1>
+			<h1>Nasze najpopularniejsze produkty:</h1>
 			<ul>
 				<?php
 				$suma = 0;
 				$string = file_get_contents("../login.json");
 				$json = json_decode($string, true);
+
 				$login = $json['login'];
 				$pass = $json['pass'];
-				$name = $json['name'];
-				$base = $json['base'];
-				$mysqli = new mysqli($base, $login, $pass, $name);
+				$basename = $json['basename'];
+				$host = $json['host'];
+
+				$productname = $json['productname'];
+				$productprice = $json['productprice'];
+
+				$mysqli = new mysqli($host, $login, $pass, $basename);
 				$result = $mysqli->query("SELECT * FROM products");
 				foreach($result as $row){
-					echo "<li>" . $row["Name"]. " -". " cena: " .$row["Price"] . "zł</li>";
-					$suma = $suma + $row["Price"];	
+					echo "<li>" . $row[$productname]. " -". " cena: " .$row[$productprice] . "zł</li>";
+					$suma = $suma + $row[$productprice];
 				}
 				?>
 			</ul>
-			<h3>Suma: <?php echo $suma;?> zł</h3>
+			<h3>Suma: <?php echo $suma;?>zł</h3>
 		</div>
 	</div>
 	<?php include '../fragments/sidebar.php'; ?>

@@ -11,9 +11,13 @@
 <div class="content">
 		<div class="wrapper">
 			<h1>Kontakt</h1>
-			<p>Nr tel: 123-456-789</p>
-            <p>Ul. Miodowa 15</p>
-            <p>Świdnica 58-100</p>
+			<p>Nr tel: 123 456 789<br>
+				Ul. Miodowa 15<br>
+				Świdnica 58-100<br><br>
+				Sklep czynny w godzinach:<br>
+				pon. - sob.: 6:00 - 23:00<br>
+				niedz.: 9:00 - 20:00
+			</p>
 		</div>
 	</div>
     <?php include '../fragments/sidebar.php'; ?>

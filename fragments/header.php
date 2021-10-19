@@ -1,4 +1,6 @@
 <div class="header">
-	<img src="../logo.png">
-	<a class="headerfont">PHP - Ćwiczenia</a>
+	<a href="../index.php">
+		<img src="../Artwork/logo.png">
+	</a>
+	<p class="headerfont">Najlepsza strona internetowa na świecie</p>
 </div>

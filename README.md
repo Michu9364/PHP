@@ -1,7 +1,7 @@
-**Aby baza danych poprawnie działała należy:**
-1. Zmienić wartości odpowiadające naszej bazie danych dla pliku "**login.template.json**".
-2. Zmienić nazwę pliku na "**login.json**".
+An example of using a login form and managing a site with a database add-on.
 
-Testowa baza danych znajduje się w folderze **Database**.
+**For the database to work properly, you must:**
+1. Change the values corresponding to our database for the file "**login.template.json**".
+2. Rename the file to "**login.json**".
 
-**Michał Olearczyk 4cT**
+Database is in the **Database** folder.
